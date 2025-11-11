@@ -16,6 +16,13 @@
       <h1>Inspetor de Ratings para Chess.com</h1>
 
       <div class="container">
+
+        <div class="form-group">
+          <div id="loading-indicator" class="spinner-border" role="status">
+            <span class="sr-only"></span>
+          </div>  
+        </div>
+
       <form>
         <div class="form-group">
           <label for="ctrl_player">Nome usuário</label>
@@ -33,6 +40,12 @@
           <small id="ctrl_time_class_help" class="form-text text-muted">Tipo de controle de tempo.</small>
         </div>
 
+        <div class="form-group">
+          <label for="ctrl_base_month">Mês base:</label>
+          <select id="ctrl_base_month" class="form-select"></select>
+          <small id="ctrl_base_month_help" class="form-text text-muted">Verificar partidas a partir do mês selecionado.</small>
+        </div>
+
 
 
         <div class="form-group">
@@ -41,8 +54,14 @@
           <small id="ctrl_base_match_help" class="form-text text-muted">Primeira partida da série.</small>
         </div>
 
-        
+        <div class="form-group">
         <button type="button" id="btnLoad" class="btn btn-primary">Carregar</button>
+        <button type="button" id="btnClear" class="btn ">Limpar</button>    
+        </div>
+
+
+
+      
         
 
         <!--
