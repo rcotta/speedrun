@@ -120,10 +120,6 @@ function parseRawGameData(rawData, currentUserName) {
     f= false
 
     games.forEach(e => {
-        if (!f) {
-            console.log(e)
-            f=true
-        }
         v = {}
         v.end_time = e.end_time
         v.uuid = e.uuid        
@@ -253,15 +249,11 @@ function loadValues() {
             // $('#' + e).change()
         }
     }
-    console.log("loadValues()")
-    console.log(localStorage)
 }
 
 function saveValue() {
-    console.log("saveValue()")
     srcId = this.id
     localStorage[srcId] = $('#' + srcId).val()
-    console.log(localStorage)
 }
 
 function loadMatches() {
@@ -326,8 +318,6 @@ REFRESH_HTML_CONTROLS = async function(e) {
             options[game.uuid] = `${sDt} - ${game.opponent} (${game.rating}, ${game.result == 1 ? 'win' : (game.result == 0 ? 'loss' : 'draw')})`
         })
         setSelectOptions($(`#${BASE_MATCH}`), options)
-
-
 
         console.log(`--> ${validGames.length} partidas válidas!`)
 
